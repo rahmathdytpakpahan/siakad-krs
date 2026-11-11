@@ -1,6 +1,10 @@
-// siakad-krs: validasi pengisian KRS (VERSI AWAL, ada bug)
+// siakad-krs: validasi pengisian KRS
 function hitungBatasSks(ips) {
-  return 24; // bug: batas tetap untuk semua IPS
+  if (ips >= 3.0) return 24;
+  if (ips >= 2.5) return 22;
+  if (ips >= 2.0) return 20;
+  if (ips >= 1.5) return 18;
+  return 16;
 }
 
 function validasiKrs(totalSks, ips) {
